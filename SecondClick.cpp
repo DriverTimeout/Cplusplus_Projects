@@ -1,26 +1,39 @@
 #include <iostream>
 using namespace std;
 
+// Function declarations
+void Highnum(int, int, int, int, int, int, int&);
+
 int main()
 {
+    // Variables
+    int a, b, c, d, e, tempH, tempL;
 
-int a, b, c, d, e, tempV, tVar;
-    int Highnum(int);
-    int Lownum(int);
-    cout << "Enter the value for Total miles driven per trip ==> ";
+    // User input
+    cout << "Enter the total miles ==> ";
     cin >> a;
-    cout << "Enter the value for Cost per gallon of gasoline. ==> ";
+    cout << "Enter the price per gallon  ==> ";
     cin >> b;
-    cout << "Enter the value for Average miles per gallon. ==> ";
+    cout << "Enter the average miles per gallon ==> ";
     cin >> c;
-    cout << "Enter the value for Parking fees per trip. ==> ";
+    cout << "Enter the price for parking fees ==> ";
     cin >> d;
-    cout << "Enter the value for Tolls per trip.  ==> ";
+    cout << "Enter the value for tolls ==> ";
     cin >> e;
 
-    tempV =   ((a/c) * b) + (e + d);
+    // Function calls
+    Highnum(a, b, c, d, e, tempH,tempL);
 
-
-    cout << "Heres your total expenses  ==> " << tempV << endl;
-
+    // Output
+    cout << "Your total cost ==> " << tempL << endl;
+    
 }
+
+// Function definition for finding the highest number
+void Highnum(int a, int b, int c, int d, int e, int tempH, int& tempL)
+{
+    tempL = (a/c * b) + d + e;
+
+    }
+
+
